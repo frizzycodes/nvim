@@ -30,6 +30,9 @@ nvim_tree.setup {
   renderer = {
     root_folder_modifier = ":t",
     icons = {
+      show = {
+        diagnostics = false,
+      },
       glyphs = {
         default = "",
         symlink = "",

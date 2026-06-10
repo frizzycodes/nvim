@@ -60,6 +60,7 @@ which_key.add({
   },
   { "<leader>F", "<cmd>Telescope live_grep theme=ivy<cr>", desc = "Find Text" },
   { "<leader>P", "<cmd>lua require('telescope').extensions.projects.projects()<cr>", desc = "Projects" },
+  { "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" },
 
   -- Lazy (plugin manager) group
   { "<leader>p", group = "Lazy" },

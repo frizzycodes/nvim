@@ -1,5 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
 		"clone",
@@ -61,4 +61,15 @@ require("lazy").setup({
 
 	-- Git
 	{ "lewis6991/gitsigns.nvim" },
+
+	-- Undo History
+	{
+		"mbbill/undotree",
+		config = function()
+			-- Sane defaults for Undotree
+			vim.g.undotree_WindowLayout = 2
+			vim.g.undotree_SplitWidth = 30
+			vim.g.undotree_SetFocusWhenToggle = 1
+		end,
+	},
 })
